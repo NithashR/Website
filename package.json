@@ -1,6 +1,6 @@
 {
-  "homepage": "http://nithashR.github.io/Website",
   "name": "resume",
+  "homepage": "https://nithashr.github.io/Website/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
