@@ -62,8 +62,9 @@ const InfoSection=()=>
                             <Column1>
                                 <TextWrapper>
                                     <TopLine>About Me</TopLine>
-                                    <Subtitle>{
-                                        "I'm a recent Computer Science graduate from Toronto Metropoltian University, formerly known as Ryerson University. I have spent the fours years of my undergrad, understanding how large the field is. I have also spent time working as a Intern at Resimply Kitchens, where I built a website and focused on automation. I am currently looking for a job in software development, IT or data analysis."
+                                    <Subtitle>
+                                    {
+                                        "I'm a recent Computer Science graduate from Toronto Metropolitan University, formerly known as Ryerson University. I have spent four years of my undergrad, understanding how large the field is, and learning new skills and knowledge. I have also spent time working as an Intern at Resimply Kitchens, where I built a website and focused on automation. I am currently looking for a job in software development, IT, or data analysis."
                                     }</Subtitle>
                                     <BtnWrap>
                                         <a class="button" target="_blank" href='https://drive.google.com/file/d/1AVEzGIKynDHDzFap9f-2TPn70QnGBN5N/view?usp=sharing'
@@ -135,11 +136,7 @@ const InfoSection=()=>
 
                                 <TopLine style={{color: "black"}}>David Suzuki Robotics</TopLine>
                                 <TopLine style={{color: "grey"}}>Team Leader <span>•</span> 2014 - 2018</TopLine>
-                                <Description style={{color: "grey"}}>Each year we were assigned a different task that the robot has to complete during the competition. For example, during the last year,
-                                                                    we had to build a  robot that would be capable of carrying a cone and placing it on a stack. We also had to program the robot to do this 
-                                                                    autonomously at the start. We were able to reach provincials in the competition. As a team leader, I had to make sure we were following our schedule,
-                                                                    as we did not have a lot of time. Another part that I found very important as a leader was, that I had to make sure everyone was heard, because 
-                                                                    there were times in the previous years when people stopped showing up, due to felling left out. </Description>
+                                <Description style={{color: "grey"}}>Each year we were assigned a different task that the robot has to complete during the competition. For example, during the last year, we had to build a robot that would be capable of carrying a cone and placing it on a stack. We also had to program the robot to do this autonomously at the start. We were able to reach provincials in the competition. As a team leader, I had to make sure we were following our schedule, as we did not have a lot of time. Another part that I found very important as a leader was, that I had to make sure everyone was heard, because there were times in the previous years when people stopped showing up, due to feeling left out. </Description>
 
                                 
                         </Column>

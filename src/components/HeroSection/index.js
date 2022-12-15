@@ -21,8 +21,8 @@ const HeroSection = () => {
             <HeroContent>
                 <HeroH1>Nithash Rajendram</HeroH1>
                 <HeroP style={{}}>
-                    I am a Toronto, Canada based Software Developer. 
-                    I recently Computer Science graduate, from Toronto Metropolitan University.
+                    I am a Software Developer based in Toronto, Canada. 
+                    I recently completed my undergraduate in Computer Science from Toronto Metropolitan University. 
                 </HeroP>
             
                 <SocialIcons>
