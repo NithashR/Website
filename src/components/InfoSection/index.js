@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 import { Button } from '../ButtonElement';
 import { FaDownload } from 'react-icons/fa'
 import 'bootstrap/dist/css/bootstrap.css';
@@ -7,6 +8,7 @@ import Robot from '../../images/robot.png'
 import Ebay from '../../images/ebay.png'
 import Train from '../../images/train.png'
 import Website from '../../images/website.png'
+import './index.css';
 
 import {
     InfoContainer, InfoWrapper, InfoRow, Column1, Column2, TextWrapper, Column, Column4, Description, ProjectWrapper,
@@ -53,6 +55,12 @@ import { Row } from 'react-bootstrap';
 
 const InfoSection=()=>
 {
+    const [hover, setHover] = useState(false)
+
+    const onHover = () => {
+        setHover(!hover)
+    }
+
     return(
         <section id="info">
             <div className='about'>
@@ -62,26 +70,13 @@ const InfoSection=()=>
                             <Column1>
                                 <TextWrapper>
                                     <TopLine>About Me</TopLine>
-                                    <Subtitle>
-                                    {
-                                        "I'm a recent Computer Science graduate from Toronto Metropolitan University, formerly known as Ryerson University. I have spent four years of my undergrad, understanding how large the field is, and learning new skills and knowledge. I have also spent time working as an Intern at Resimply Kitchens, where I built a website and focused on automation. I am currently looking for a job in software development, IT, or data analysis."
+                                    <Subtitle>{
+                                        "I'm a recent Computer Science graduate from Toronto Metropoltian University, formerly known as Ryerson University. I have spent the fours years of my undergrad, understanding how large the field is. I have also spent time working as a Intern at Resimply Kitchens, where I built a website and focused on automation. I am currently looking for a job in software development, IT or data analysis."
                                     }</Subtitle>
-                                    <BtnWrap>
-                                        <a class="button" target="_blank" href='https://drive.google.com/file/d/1AVEzGIKynDHDzFap9f-2TPn70QnGBN5N/view?usp=sharing'
-                                            smooth={true}
-                                            duration={500}
-                                            spy={true}
-                                            exact="true"
-                                            offset={-80}
-                                            primary={true ? 1 : 0}
-                                            dark={true ? 1: 0}
-                                            style ={{fontSize: 20, borderRadius: 5, background: "#0057fa", padding: 14,  width: 247, height: 50, color: "white", }}
-                                            >
-                                                <FaDownload style={{marginRight: 10}}> </FaDownload>
-                                                Download Resume 
-                                        </a>
-                                    </BtnWrap>
-
+                                    <a className="button2" target="_blank" href = 'https://drive.google.com/file/d/1AVEzGIKynDHDzFap9f-2TPn70QnGBN5N/view?usp=sharing' > 
+                                        <FaDownload style={{marginRight: 10}}> </FaDownload> Download Resume 
+                                    </a>
+                                    
                                 </TextWrapper>
                             </Column1>
                             <Column2>
@@ -136,7 +131,11 @@ const InfoSection=()=>
 
                                 <TopLine style={{color: "black"}}>David Suzuki Robotics</TopLine>
                                 <TopLine style={{color: "grey"}}>Team Leader <span>•</span> 2014 - 2018</TopLine>
-                                <Description style={{color: "grey"}}>Each year we were assigned a different task that the robot has to complete during the competition. For example, during the last year, we had to build a robot that would be capable of carrying a cone and placing it on a stack. We also had to program the robot to do this autonomously at the start. We were able to reach provincials in the competition. As a team leader, I had to make sure we were following our schedule, as we did not have a lot of time. Another part that I found very important as a leader was, that I had to make sure everyone was heard, because there were times in the previous years when people stopped showing up, due to feeling left out. </Description>
+                                <Description style={{color: "grey"}}>Each year we were assigned a different task that the robot has to complete during the competition. For example, during the last year,
+                                                                    we had to build a  robot that would be capable of carrying a cone and placing it on a stack. We also had to program the robot to do this 
+                                                                    autonomously at the start. We were able to reach provincials in the competition. As a team leader, I had to make sure we were following our schedule,
+                                                                    as we did not have a lot of time. Another part that I found very important as a leader was, that I had to make sure everyone was heard, because 
+                                                                    there were times in the previous years when people stopped showing up, due to felling left out. </Description>
 
                                 
                         </Column>
@@ -173,12 +172,12 @@ const InfoSection=()=>
                             Past Projects
                         </TopLine>
                         <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridGap: 20 , alignItems: 'center'}}>
-                            <div><a href='https://nithash.itch.io/robot-apocalypse'><img src={Robot} style ={{width:400, height:200}} alt={'Robot'}  onClick='https://nithash.itch.io/robot-apocalypse'/></a></div>
-                            <div><a href='https://github.com/NithashR/Ebay_Auction'><img src={Ebay} style ={{width:400, height:200}} alt={'Ebay'}  onClick='https://github.com/NithashR/Ebay_Auction'/></a></div>
+                            <div><a href='https://nithash.itch.io/robot-apocalypse'><img className = "content" src={Robot} style ={{width:400, height:200}} alt={'Robot'}  onClick='https://nithash.itch.io/robot-apocalypse'/></a></div>
+                            <div><a href='https://github.com/NithashR/Ebay_Auction'><img className = "content" src={Ebay} style ={{width:400, height:200}} alt={'Ebay'}  onClick='https://github.com/NithashR/Ebay_Auction'/></a></div>
                         </div>
                         <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridGap: 20 , alignItems: 'center'}}>
-                            <div><a href='https://github.com/NithashR/TrainGame'><img src={Train} style ={{width:400, height:200}} alt={'Train'}  onClick='https://github.com/NithashR/TrainGame'/></a></div>
-                            <div><a href='http://localhost:3000'><img src={Website} style ={{width:400, height:200}} alt={'Website'}  onClick='http://localhost:3000'/></a></div>
+                            <div><a href='https://github.com/NithashR/TrainGame'><img className = "content" src={Train} style ={{width:400, height:200}} alt={'Train'}  onClick='https://github.com/NithashR/TrainGame'/></a></div>
+                            <div><a href='http://localhost:3000'><img className = "content" src={Website} style ={{width:400, height:200}} alt={'Website'}  onClick='http://localhost:3000'/></a></div>
                         </div>
                     </ProjectWrapper>
                 </InfoContainer>
