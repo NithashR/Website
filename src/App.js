@@ -5,9 +5,9 @@ import Home from './pages';
 function App() {
   return (
     <Router>
-        <Route exact path="/resume">
-          <Home/> 
-        </Route>
+      <Routes>
+        <Route path="/" element={<Home/>} exact />
+      </Routes>
     </Router>
   );
 }
